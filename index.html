@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garotinha Má ❤️</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Player do Spotify -->
+        <div class="spotify-player">
+            <iframe id="spotify-embed" src="https://open.spotify.com/embed/track/2u3hJqwkyVlgRkHR6AWboq?si=0e0e8d1befe34dd1" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+        
+        <!-- Imagem -->
+        <img src="image.jpg" alt="Imagem do casal" class="image">
+
+        <h2>Garotinha má ❤️</h2>
+        <p class="timer" id="contador">Carregando...</p>
+        <div class="text-box">
+            <p>
+                Assim como <strong>"Orgulho e Preconceito"</strong>, nossa relação é sem boas maneiras e muito mais sarcasmo.
+                Posso não ser o Sr. Darcy, mas pelo menos não preciso de uma cena dramática de chuva para admitir o óbvio, 
+                eu gosto muito de você. Não tenho certeza se ficaria impressionado com o Sr. Darcy, mas sua inteligência certamente 
+                afeta minha cabeça assim como a dele afeta a Elizabeth. Feliz Dia das Mulheres para você, princesa.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function atualizarContador() {
+            const dataInicio = new Date("2025-02-01T00:00:00");
+            const agora = new Date();
+            let diffMs = agora - dataInicio;
+
+            let segundos = Math.floor(diffMs / 1000);
+            let minutos = Math.floor(segundos / 60);
+            let horas = Math.floor(minutos / 60);
+            let dias = Math.floor(horas / 24);
+            let meses = Math.floor(dias / 30.44);
+            
+            dias = dias % 30.44;
+            horas = horas % 24;
+            minutos = minutos % 60;
+            segundos = segundos % 60;
+
+            document.getElementById("contador").innerHTML = 
+                `${meses} meses, ${Math.floor(dias)} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos`;
+        }
+
+        setInterval(atualizarContador, 1000);
+        atualizarContador();
+    </script>
+</body>
+</html>

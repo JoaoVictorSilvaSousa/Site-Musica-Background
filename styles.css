@@ -19,12 +19,12 @@ body {
 }
 
 .spotify-player {
-    margin-bottom: 20px; /* Espaço entre o player e a imagem */
-    padding-top: 80px; /* Ajuste para descer o player */
+    margin-bottom: 20px; 
+    padding-top: 120px;
 }
 
 .image {
-    width: 80%; /* Reduzindo o tamanho da imagem */
+    width: 80%; 
     border-radius: 10px;
 }
 

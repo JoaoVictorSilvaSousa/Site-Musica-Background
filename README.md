@@ -1,3 +1,3 @@
 # SiteQrCode
  
-Link Site: [text](https://joaovictorsilvasousa.github.io/SiteQrCode/)
+Link Site: [text](https://sitebobinha.netlify.app/)
